@@ -1,0 +1,441 @@
+
+
+/* variable declaration start */
+:root{
+    --box-shadow:rgba(0, 0, 0, 0.08);
+
+    --primary-blue:#0000FF;
+    --black:#000000;
+    --white:#FFFFFF;
+
+    --roboto:'Roboto', sans-serif;
+    --outfit: 'Outfit', sans-serif;
+
+    --gray78:#c7c7c7;
+
+    --red:red;
+    --green:green;
+    --Grey-Medium: #E5E5E5;
+
+}
+/* variable declaration end */
+
+
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* common code for both login and register page start  */
+
+/* landing page code start*/
+.landingpage{
+    display: flex;
+    height: 100vh;  
+    gap: 5rem;
+}
+/* landing page code end*/
+
+
+/* landing page Image section start */
+
+.landingpage-image-section{
+    flex: 50%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.image-box{
+    background-color: var(--white);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    max-width: 430px;
+    margin-left: 2rem;
+}
+
+
+
+.image-box img{
+    width: 100%;
+    height:auto;
+    margin-left: 2rem;
+}
+
+/* landing page Image section end */
+
+
+
+/* landing page content section */
+.landingpage-contents-section{
+    flex: 50%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    
+    min-width: 295px;
+    width: 40%;
+    max-width: 295px;
+    margin-right: 2rem;
+
+}
+
+/* Customer or Retailer toggle button section start */
+.customer-or-retailer-button-section{
+    box-shadow: 0px 0.5rem 1.25rem 0px var(--box-shadow);
+    background-color:var(--white);
+    display: flex;
+    border: 0.125rem solid var(--primary-blue);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.customer-or-retailer-button-section input{
+    display: none;
+}
+
+.customer-or-retailer-button-section label{
+    color: var(--black);
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 14px 0px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    
+}
+
+.customer-or-retailer-button-section input[type="radio"]:checked + label{
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.customer-or-retailer-button-section input[type="radio"]:checked + .label1{
+    border-radius: 0.25rem 0px 0px 0.25rem;
+}
+
+.customer-or-retailer-button-section input[type="radio"]:checked + .label2{
+    border-radius: 0px 0.25rem 0.25rem 0px;
+}
+
+/* Customer or Retailer toggle button section end */
+
+
+/* form section start */
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 50px 40px 50px 40px;
+    font-family: var(--roboto);
+    border-radius: 0.625rem;
+    box-shadow: 0px 0px 0.938rem 0px var(--gray78);
+    color: #212529;
+}
+
+/* form input group section start */
+.form-input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.2rem;
+    position: relative;
+}
+.form-input-group label{
+    font-size: 14px;
+    margin-bottom: 4px;
+    
+}
+.form-input-group input{
+    color: #212529;
+    margin-top: 0.3rem;
+    border: none;
+    border-bottom: 1px solid  #212529;
+    padding: 0.5px;
+    font-size: 14px;
+
+}
+
+.form-input-group input:focus{
+    outline: 0;
+    background-color: var(--white);
+}
+/* form input group section start */
+
+
+/* form sign up and sign in button  style start*/
+.form button{
+    background-color: var(--primary-blue);
+    padding: 0.63rem 1.13rem;
+    border: none;
+    border-radius: 0.188rem;
+    margin-top: 4px;
+    margin-bottom: 1rem;
+
+    color: var(--white);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1rem;
+    cursor: pointer;
+}
+/* form sign up and sign in button  style end*/
+
+
+/* form input error message show section start */
+
+
+.form-input-group .error{
+    color: var(--red);
+    font-size: 12px;
+    margin-top: 2px;
+    visibility: hidden;
+    
+}
+
+.form-input-group.error input{
+    border-color: var(--red);
+
+}
+/* form input error message show section end*/
+
+
+/* page redirect style strat */
+.page-redirect {
+    font-size: 14px;
+}
+
+
+
+.form a{
+    margin-left: 10px;
+    text-decoration: none;
+    position: absolute;
+    color: var(--primary-blue);
+}
+/* page redirect style end */
+
+
+/* form section end */
+
+
+
+/* media query for mobile view  start*/
+
+@media(max-width:767px){
+    .landingpage{
+        /* height: 100%; */
+    }
+
+    .landingpage-image-section{
+        display: none;
+        
+    }
+
+    .landingpage-contents-section{
+        flex: 100%;
+        align-items: center;
+        padding: 2rem;        
+    }
+
+    .form-box{
+        min-width: 300px;
+        max-width: 500px;
+        width: 80%;
+        margin: 0px;
+        padding: 1rem 1rem;
+        gap: 2rem;
+    }
+
+    .form-input-group{
+        margin-bottom: 0rem;
+    }
+
+
+    .form-input-group input{
+        margin-top: 0rem;
+        font-size: 1rem;
+    }
+
+    .form a{
+    position: absolute;
+    }
+
+}
+/* media query for mobile view  end*/
+
+
+
+/* popup message section start */
+
+/* popup box  section (i.e light black background) start*/
+.popup-box{
+    font-family: 'Inter', sans-serif;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility:hidden;
+    /* min-width: 917px; */
+}
+/* popup box  section (i.e light black background) end*/
+
+.popup-background{
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+/* this class show the popup-box */
+.open-popup{
+    visibility:visible;
+}
+/* this class hide the popup-box */
+.close-popup{
+    visibility:hidden;
+}
+
+/* popup message style start */
+.popup{
+
+    border-radius: 0.5rem;
+
+    border: 1px solid var(--Stroke-light);
+    background: var(--white);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.25rem 2.5rem;
+    gap: 1.5rem;
+
+    font-size: 1.25rem;
+}
+
+/* this style for popup message content tag */
+.popup div{
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* this style for popup page redirct button style  start*/
+/* (i.e registration page to sign in page redirect button in popup message  ) */
+.popup button{
+    width: 100%;
+    display: flex;
+    height: 2.75rem;
+    padding: 0.875rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    align-self: stretch;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--primary-blue);
+    color: var(--white);
+    font-size: 1rem;
+}
+.popup button:hover{
+    cursor: pointer;
+}
+/* this style for popup page redirct button style  end*/
+
+
+/* popup message style end */
+
+
+
+/* popup close button(i.e cross icon) style start */
+
+.popup .popup-close-button{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.56rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.25rem;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--Grey-Medium, #E5E5E5);;
+}
+
+.popup-close-button img{
+    height: 0.625rem;
+    width: 0.625rem;
+}
+/* popup close button(i.e cross icon) style start */
+
+
+/* media query for popup message in mobile view start*/
+@media(max-width:767px){
+    .popup-background{
+        min-width: 445px;
+    }
+
+    .popup-box{
+        min-width: 445px;
+    }
+}
+/* media query for popup message in mobile view end*/
+
+
+/* password eye button style start */
+.form-input-group span{
+    position: absolute;
+    cursor: pointer;
+    font-size: 13px;
+    right: 1px;
+    top: 27px;
+    visibility: hidden;
+}
+/* password eye button style end */
+
+@media(max-width:767px){
+    .form-input-group span{
+        position: absolute;
+        cursor: pointer;
+        font-size: 13px;
+        right: 1px;
+        top: 23px;
+        visibility: hidden;
+    }
+}
+
+
+#password,#cpassword{
+    padding-right: 1.3rem;
+}
